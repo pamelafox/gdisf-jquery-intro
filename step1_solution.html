@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Video Watcher</title>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.css">
+ </head>
+ <body>
+
+<div class="container">
+ 
+ <div class="row">
+   <div class="span12">
+    <h2 class="page-header">Best Videos Ever ❤</h1>
+   </div>
+ </div>
+ 
+ <div class="row">
+   <div class="span3">
+     <ul>
+      <li><a href="https://www.youtube.com/watch?v=TddFnTB_7IM">Trip through the 80s</a></li>
+      <li><a href="https://www.youtube.com/watch?v=vX07j9SDFcc">Circle of Life</a></li>
+      <li><a href="https://www.youtube.com/watch?v=il2IrgFHfsg">The Ooooh Cat</a></li>
+    </ul>
+   </div>
+ </div>
+</div>
+
+ <script type="text/javascript" src="lib/youtube.js"></script>
+ <script>
+  var videoLinks = document.getElementsByTagName('a');
+  for (var i = 0; i < videoLinks.length; i++) {
+    var linkUrl = videoLinks[i].getAttribute('href');
+    var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
+    var thumbnailImg = document.createElement('img');
+    thumbnailImg.setAttribute('src', thumbnailUrl);
+    videoLinks[i].appendChild(thumbnailImg);
+  }
+ </script>
+ </body>
+</html>
