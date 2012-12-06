@@ -13,6 +13,8 @@ You should then be able to access your project folder at http://localhost:8000
 
 3) Go to https://developers.google.com/chart/image/docs/gallery/googleometer_chart and read about the Google-o-meter image chart API. Generate a chart for each video that shows its rating (from the JSON). Display that chart when you click on the video. Try generating the chart URLs in the browser first, and only code it in JavaScript once you know what you want the URLs to look like.
 
+4) Modify the generated Youtube iframe players so that they auto-play when clicked. Read the docs here: https://developers.google.com/youtube/player_parameters#autohide
+
 Bonus: Create a bar chart that compares the ratings across all the videos, using the Google Bar Charts Image API: https://developers.google.com/chart/image/docs/gallery/bar_charts
 
 --------------------
