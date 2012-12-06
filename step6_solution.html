@@ -50,7 +50,7 @@
         var videoTitle = $('<h2>');
         videoTitle.html(video.title + ' <small>' + video.author + '</small>');
         var videoEmbed = $('<iframe></iframe>');
-        videoEmbed.attr('src', youtube.generateEmbedUrl(video.youtubeId));
+        videoEmbed.attr('src', youtube.generateEmbedUrl(video.youtubeId) + '?autoplay=1');
         videoEmbed.attr('width', 560);
         videoEmbed.attr('height', 315);
 
