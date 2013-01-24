@@ -31,14 +31,14 @@
  <script type="text/javascript" src="lib/youtube.js"></script>
  <script type="text/javascript" src="lib/jquery.min.js"></script>
  <script>
- var $videoLinks = $('a');
- $videoLinks.each(function() {
-    var $videoLink = $(this);
-    var linkUrl = $videoLink.attr('href');
+ var videoLinks = $('a');
+ videoLinks.each(function() {
+    var videoLink = $(this);
+    var linkUrl = videoLink.attr('href');
     var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
-    var $thumbnailImg = $('<img>');
-    $thumbnailImg.attr('src', thumbnailUrl);
-    $videoLink.append($thumbnailImg);
+    var thumbnailImg = $('<img>');
+    thumbnailImg.attr('src', thumbnailUrl);
+    videoLink.append(thumbnailImg);
   });
  </script>
  </body>
