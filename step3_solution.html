@@ -31,25 +31,25 @@
  <script type="text/javascript" src="lib/youtube.js"></script>
  <script type="text/javascript" src="lib/jquery.min.js"></script>
  <script>
- var $videoLinks = $('a');
- $videoLinks.each(function() {
-    var $videoLink = $(this);
-    var linkUrl = $videoLink.attr('href');
+ var videoLinks = $('a');
+ videoLinks.each(function() {
+    var videoLink = $(this);
+    var linkUrl = videoLink.attr('href');
     var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
-    var $thumbnailImg = $('<img>');
-    $thumbnailImg.attr('src', thumbnailUrl);
-    $videoLink.append($thumbnailImg);
+    var thumbnailImg = $('<img>');
+    thumbnailImg.attr('src', thumbnailUrl);
+    videoLink.append(thumbnailImg);
     
-    $videoLink.on('click', function(e) {
+    videoLink.on('click', function(e) {
         e.preventDefault();
-        var $videoEmbed = $('<iframe></iframe>');
-        $videoEmbed.attr('src', youtube.generateEmbedUrl(linkUrl));
-        $videoEmbed.attr('width', 560);
-        $videoEmbed.attr('height', 315);
-        var $videoWatcher = $('#video-watcher');
-        $videoWatcher.hide();
-        $videoWatcher.html($videoEmbed);
-        $videoWatcher.fadeIn();
+        var videoEmbed = $('<iframe></iframe>');
+        videoEmbed.attr('src', youtube.generateEmbedUrl(linkUrl));
+        videoEmbed.attr('width', 560);
+        videoEmbed.attr('height', 315);
+        var videoWatcher = $('#video-watcher');
+        videoWatcher.hide();
+        videoWatcher.html(videoEmbed);
+        videoWatcher.fadeIn();
     });
   });
   
